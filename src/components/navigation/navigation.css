@@ -1,0 +1,28 @@
+nav {
+    background-color: black;
+    margin-top: 30px;
+    margin-left: 150px;
+    gap: 40px;
+    width: 360px;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .text__page{
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}

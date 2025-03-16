@@ -1,0 +1,29 @@
+.description_container {
+    text-align: center;
+    height: 520px;
+}
+
+.description__name {
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+    padding-top: 80px;
+    margin-bottom: 20px;
+}
+
+.black__beans {
+    width: 200px;
+    margin-bottom: 40px;
+}
+
+.text__container {
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraph {
+
+}

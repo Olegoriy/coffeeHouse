@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import './app.css';
 import Main from '../main/main';
+import Description from '../description/description';
 
 class App extends Component {
   constructor (props) {
@@ -19,6 +20,7 @@ class App extends Component {
     return (
       <div className="app">
         <Main />
+        <Description />
       </div>
     )
   }

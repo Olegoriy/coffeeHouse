@@ -4,6 +4,7 @@
     background-size: cover;
     height: 640px;
     color: white;
+    text-align: center;
 }
 
 .slogan {
@@ -11,13 +12,30 @@
     font-size: 40px;
     color: #fff;
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    display: block;
-    width: 670px;
     margin: 111px auto 20px auto;
 }
 
 .white__beans {
-    margin: 0 auto;
+    margin: 0 auto 35px auto;
     display: block;
     width: 200px;
 }
+
+.main__container p {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.main__container button {
+    width: 120px;
+    height: 30px;
+    font-family: Merienda, sans-serif;
+    background-color: inherit;
+    border: #fff 1px solid;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+} 

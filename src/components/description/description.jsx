@@ -3,8 +3,8 @@ import './description.css';
 const Description = () => {
     return (
         <div className="description_container">
-            <h2 className="description__name">About Us</h2>
-            <img className="black__beans" src={require('./img/beans__black.svg').default} alt="Black beans" />
+            <h2 className="description__name">About Us</h2><img className="black__beans" src={require('./img/beans__black.svg').default} alt="Black beans" />
+            
             <div className="text__container">
                 <p className='paragraph'>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                 Afraid at highly months do things on at. Situation recommend objection do intention

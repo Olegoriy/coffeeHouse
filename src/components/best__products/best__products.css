@@ -11,3 +11,39 @@
     font-size: 24px;
     text-align: center;
 }
+
+.container__cards {
+    display: flex;
+    margin: 40px auto 0 auto;
+    gap: 71px;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.card {
+    border-radius: 8px;
+    width: 220px;
+    height: 240px;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.img__card {
+    margin-top: 22px;
+    width: 151px;
+    height: 130px;
+}
+
+.name__card {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: end;
+    padding-right: 20px;
+    margin-top: 10px;
+}

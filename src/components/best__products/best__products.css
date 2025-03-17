@@ -1,0 +1,13 @@
+.best__products {
+    text-align: center;
+    height: 495px;
+    min-width: 100vw;
+    background-image: url(./img/bestbg.svg);
+}
+
+.best__products__name {
+    padding-top: 80px;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}

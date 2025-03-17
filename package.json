@@ -33,7 +33,8 @@
     "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.37.4",
-    "postcss-preset-env": "^10.1.5"
+    "postcss-preset-env": "^10.1.5",
+    "postcss-selector-not": "^8.0.1"
   },
   "author": "Oleg Kibalin",
   "license": "ISC"

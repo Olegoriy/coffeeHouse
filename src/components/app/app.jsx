@@ -6,6 +6,7 @@ import Description from '../description/description';
 import BestProducts from '../best__products/best__products';
 import Footer from '../footer/footer';
 import OurCoffeeHeader from '../our__coffee__header/our__coffee__header';
+import OurCoffeeDescription from '../our__coffee__description/our__coffee__description';
 
 class App extends Component {
   constructor (props) {
@@ -25,6 +26,7 @@ class App extends Component {
 
         <div className="assortiment show">
           <OurCoffeeHeader />
+          <OurCoffeeDescription />
         </div>
       </div>
     )

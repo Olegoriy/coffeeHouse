@@ -1,0 +1,38 @@
+.container__description {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 80px;    
+    margin-top: 70px;
+}
+
+.img__description {
+    width: 272px;
+    height: 355px;
+    object-fit: contain;
+}
+
+.head__description {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.black__beans__description {
+    margin-top: 20px;
+}
+
+.text__description {
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    max-width: 346px;
+}
+
+.border {
+    margin: 60px auto 0 auto;
+    border: 0.9px solid #000;
+    width: 240px;
+    height: 0px;
+}

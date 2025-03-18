@@ -1,0 +1,13 @@
+.our__coffee__header {
+    min-width: 100vw;
+    height: 260px;
+    background-image: url(./img/ourcoffeebg.svg);
+    text-align: center;
+}
+
+.our__coffee__head {
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    margin-top: 60px;
+}

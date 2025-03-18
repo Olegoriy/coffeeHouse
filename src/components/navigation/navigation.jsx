@@ -2,7 +2,7 @@ import './navigation.css'
 
 const Navigation = () => {
     return (
-        <nav className="container">
+        <nav className="container" id='home'>
             <ul className="navigation">
             <li className="navigation__link">
                 <a href="#home" className="navigation__logo">

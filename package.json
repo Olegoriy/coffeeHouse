@@ -2,7 +2,9 @@
   "name": "coffee_house",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Olegoriy.github.io/coffeeHouse",
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "lodash": "^4.17.21",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -10,6 +12,8 @@
     "webpack": "^5.98.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -30,6 +34,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "./src/index.js",
   "devDependencies": {
+    "@eslint/js": "^9.22.0",
     "array-includes": "^3.1.8",
     "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",

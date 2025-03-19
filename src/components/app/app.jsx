@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: 'ourCoffee', 
+      currentPage: 'base', 
     };
   }
 
@@ -38,6 +38,7 @@ class App extends Component {
           <OurCoffeeHeader switchPage={this.switchPage} />
           <OurCoffeeDescription />
           <OurCoffeeFilter />
+          <Footer />
         </div>
       </div>
     );

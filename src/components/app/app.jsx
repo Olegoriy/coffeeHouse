@@ -6,12 +6,13 @@ import BestProducts from '../best__products/best__products';
 import Footer from '../footer/footer';
 import OurCoffeeHeader from '../our__coffee__header/our__coffee__header';
 import OurCoffeeDescription from '../our__coffee__description/our__coffee__description';
+import OurCoffeeFilter from '../our__coffee__filter/our__coffee__filter';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: 'base', 
+      currentPage: 'ourCoffee', 
     };
   }
 
@@ -36,6 +37,7 @@ class App extends Component {
         <div className={`assortiment ${currentPage === 'ourCoffee' ? 'show' : 'hide'}`}>
           <OurCoffeeHeader switchPage={this.switchPage} />
           <OurCoffeeDescription />
+          <OurCoffeeFilter />
         </div>
       </div>
     );

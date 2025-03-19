@@ -3,21 +3,16 @@
 html, body {
   min-width: 100%;
   min-height: 100%;
-  font-family: Merienda, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
   overflow-x: hidden;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Merienda", cursive;
 }
 
 .hide {

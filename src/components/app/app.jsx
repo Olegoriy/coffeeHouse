@@ -20,7 +20,7 @@ class App extends Component {
   switchPage = (page) => {
     if (this.state.currentPage === page) return;
     
-    this.setState({ prevPage: this.state.currentPage }, () => {
+    this.setState(prevState => ({ prevPage: prevState.currentPage }), () => {
       setTimeout(() => {
         this.setState({
           currentPage: page,

@@ -1,38 +1,44 @@
-.App {
+.app {
   text-align: center;
+  position: relative;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
+.base,
+.ourCoffee {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
+  box-sizing: border-box; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.page-content {
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.base.show,
+.ourCoffee.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+  overflow-y: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.base.hide {
+  transform: translateX(-20px);
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ourCoffee.hide {
+  transform: translateX(20px);
+  opacity: 0;
 }

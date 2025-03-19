@@ -12,33 +12,47 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: 'base', 
+      currentPage: 'base',
+      prevPage: null,
     };
   }
 
   switchPage = (page) => {
-    this.setState({ currentPage: page });
+    if (this.state.currentPage === page) return;
+    
+    this.setState({ prevPage: this.state.currentPage }, () => {
+      setTimeout(() => {
+        this.setState({
+          currentPage: page,
+          prevPage: null
+        });
+      }, 400);
+    });
   };
 
   render() {
-    const { currentPage } = this.state;
-
+    const { currentPage, prevPage } = this.state;
+  
     return (
       <div className="app">
         {/* Базовая страница */}
-        <div className={`base__page ${currentPage === 'base' ? 'show' : 'hide'}`}>
-          <Main switchPage={this.switchPage} />
-          <Description />
-          <BestProducts />
-          <Footer />
+        <div className={`base ${currentPage === 'base' ? 'show' : 'hide'} ${prevPage === 'base' ? 'hide' : ''}`}>
+          <div className="page-content"> 
+            <Main switchPage={this.switchPage} />
+            <Description />
+            <BestProducts />
+            <Footer switchPage={this.switchPage} />
+          </div>
         </div>
-
+  
         {/* Страница "Our Coffee" */}
-        <div className={`assortiment ${currentPage === 'ourCoffee' ? 'show' : 'hide'}`}>
-          <OurCoffeeHeader switchPage={this.switchPage} />
-          <OurCoffeeDescription />
-          <OurCoffeeFilter />
-          <Footer />
+        <div className={`ourCoffee ${currentPage === 'ourCoffee' ? 'show' : 'hide'} ${prevPage === 'ourCoffee' ? 'hide' : ''}`}>
+          <div className="page-content"> 
+            <OurCoffeeHeader switchPage={this.switchPage} />
+            <OurCoffeeDescription />
+            <OurCoffeeFilter />
+            <Footer switchPage={this.switchPage} />
+          </div>
         </div>
       </div>
     );

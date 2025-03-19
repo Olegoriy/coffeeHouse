@@ -3,7 +3,7 @@ import './navigation.css';
 
 const Navigation = ({ switchPage }) => {
   return (
-    <nav className="container" id="home">
+    <nav className="container">
       <ul className="navigation">
         <li className="navigation__link">
           <a href="#base" className="navigation__logo"
@@ -17,7 +17,7 @@ const Navigation = ({ switchPage }) => {
 
         <li className="navigation__link text__page">
           <a
-            href="#our-coffee"
+            href=""
             onClick={(e) => {
               e.preventDefault();
               switchPage('ourCoffee');

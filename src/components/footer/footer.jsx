@@ -6,7 +6,7 @@ const Footer = ({ switchPage }) => {
         <nav className="nav__container">
           <ul className="navigation">
             <li className="navigation__link">
-              <a href="#home" onClick={(e) => {
+              <a href="#home" className="navigation__logo" onClick={(e) => {
                 e.preventDefault();
                 switchPage('base');
               }}>

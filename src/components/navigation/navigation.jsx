@@ -17,7 +17,7 @@ const Navigation = ({ switchPage }) => {
 
         <li className="navigation__link text__page">
           <a
-            href=""
+            href="#ourCoffee"
             onClick={(e) => {
               e.preventDefault();
               switchPage('ourCoffee');
@@ -31,8 +31,8 @@ const Navigation = ({ switchPage }) => {
           <a
             href="#for-your-pleasure"
             onClick={(e) => {
-              e.preventDefault(); // Отменяем стандартное поведение ссылки
-              switchPage('base'); // Переключаем на базовую страницу
+              e.preventDefault(); 
+              switchPage('base'); 
             }}
           >
             For your pleasure

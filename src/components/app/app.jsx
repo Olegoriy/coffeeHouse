@@ -8,6 +8,7 @@ import OurCoffeeHeader from '../our__coffee__header/our__coffee__header';
 import OurCoffeeDescription from '../our__coffee__description/our__coffee__description';
 import OurCoffeeFilter from '../our__coffee__filter/our__coffee__filter';
 import PleasureHeader from '../pleasure__header/pleasure__header';
+import PleasureDescription from '../pleasure__description/pleasure__description';
 
 class App extends Component {
   constructor(props) {
@@ -59,6 +60,7 @@ class App extends Component {
       {/* Страница "For your pleasure" */}
       <div className="pleasure show">
         <PleasureHeader />
+        <PleasureDescription />
       </div>
 
       </div>

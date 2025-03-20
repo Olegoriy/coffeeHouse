@@ -9,20 +9,31 @@ import OurCoffeeDescription from '../our__coffee__description/our__coffee__descr
 import OurCoffeeFilter from '../our__coffee__filter/our__coffee__filter';
 import PleasureHeader from '../pleasure__header/pleasure__header';
 import PleasureDescription from '../pleasure__description/pleasure__description';
+import PleasureCatalog from '../pleasure__catalog/pleasure__catalog';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: 'pleasure',
+      currentPage: 'base',
       prevPage: null,
+      direction: 'right' 
     };
   }
 
+  getPageOrder = () => ({
+    base: 1,
+    ourCoffee: 2,
+    pleasure: 3
+  });
+
   switchPage = (page) => {
     if (this.state.currentPage === page) return;
-    
-    this.setState(prevState => ({ prevPage: prevState.currentPage }), () => {
+
+    const order = this.getPageOrder();
+    const direction = order[page] > order[this.state.currentPage] ? 'left' : 'right';
+
+    this.setState({ prevPage: this.state.currentPage, direction }, () => {
       setTimeout(() => {
         this.setState({
           currentPage: page,
@@ -32,37 +43,53 @@ class App extends Component {
     });
   };
 
+  renderPage(pageName, content) {
+    const { currentPage, prevPage, direction } = this.state;
+    const isActive = currentPage === pageName;
+    const isPrev = prevPage === pageName;
+
+    let animationClass = '';
+    if (isActive) animationClass = 'show';
+    if (isPrev) animationClass = `hide page-slide-${direction}`;
+
+    return (
+      <div className={`${pageName} ${animationClass}`}>
+        <div className="page-content">
+          {content}
+        </div>
+      </div>
+    );
+  }
+
   render() {
-    const { currentPage, prevPage } = this.state;
-  
     return (
       <div className="app">
-        {/* Базовая страница */}
-        <div className={`base ${currentPage === 'base' ? 'show' : 'hide'} ${prevPage === 'base' ? 'hide' : ''}`}>
-          <div className="page-content"> 
+        {this.renderPage('base', (
+          <>
             <Main switchPage={this.switchPage} />
             <Description />
             <BestProducts />
             <Footer switchPage={this.switchPage} />
-          </div>
-        </div>
-  
-        {/* Страница "Our Coffee" */}
-        <div className={`ourCoffee ${currentPage === 'ourCoffee' ? 'show' : 'hide'} ${prevPage === 'ourCoffee' ? 'hide' : ''}`}>
-          <div className="page-content"> 
+          </>
+        ))}
+
+        {this.renderPage('ourCoffee', (
+          <>
             <OurCoffeeHeader switchPage={this.switchPage} />
             <OurCoffeeDescription />
             <OurCoffeeFilter />
             <Footer switchPage={this.switchPage} />
-          </div>
-        </div>
+          </>
+        ))}
 
-      {/* Страница "For your pleasure" */}
-      <div className="pleasure show">
-        <PleasureHeader />
-        <PleasureDescription />
-      </div>
-
+        {this.renderPage('pleasure', (
+          <>
+            <PleasureHeader switchPage={this.switchPage} />
+            <PleasureDescription />
+            <PleasureCatalog />
+            <Footer switchPage={this.switchPage} />
+          </>
+        ))}
       </div>
     );
   }

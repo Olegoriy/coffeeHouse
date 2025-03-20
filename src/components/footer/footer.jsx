@@ -22,7 +22,11 @@ const Footer = ({ switchPage }) => {
               </a>
             </li>
             <li className="navigation__link text__page">
-                <a href="">For your pleasure</a>
+                <a href="pleasure" onClick={(e) => {
+                  e.preventDefault();
+                  switchPage('pleasure');
+                }}>
+                  For your pleasure</a>
             </li>
           </ul>
         </nav>

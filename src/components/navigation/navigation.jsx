@@ -32,7 +32,7 @@ const Navigation = ({ switchPage }) => {
             href="#for-your-pleasure"
             onClick={(e) => {
               e.preventDefault(); 
-              switchPage('base'); 
+              switchPage('pleasure'); 
             }}
           >
             For your pleasure

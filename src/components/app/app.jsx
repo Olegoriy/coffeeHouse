@@ -7,12 +7,13 @@ import Footer from '../footer/footer';
 import OurCoffeeHeader from '../our__coffee__header/our__coffee__header';
 import OurCoffeeDescription from '../our__coffee__description/our__coffee__description';
 import OurCoffeeFilter from '../our__coffee__filter/our__coffee__filter';
+import PleasureHeader from '../pleasure__header/pleasure__header';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: 'base',
+      currentPage: 'pleasure',
       prevPage: null,
     };
   }
@@ -54,6 +55,12 @@ class App extends Component {
             <Footer switchPage={this.switchPage} />
           </div>
         </div>
+
+      {/* Страница "For your pleasure" */}
+      <div className="pleasure show">
+        <PleasureHeader />
+      </div>
+
       </div>
     );
   }

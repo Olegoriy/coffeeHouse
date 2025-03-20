@@ -1,0 +1,11 @@
+.pleasure__container {
+    min-width: 100vw;
+    height: 260px;
+    background-image: url('./img/pleasurebg.svg');
+}
+
+.pleasure__head {
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+}

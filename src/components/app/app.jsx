@@ -10,6 +10,7 @@ import OurCoffeeFilter from '../our__coffee__filter/our__coffee__filter';
 import PleasureHeader from '../pleasure__header/pleasure__header';
 import PleasureDescription from '../pleasure__description/pleasure__description';
 import PleasureCatalog from '../pleasure__catalog/pleasure__catalog';
+import CardsPage from '../cards__page/cards__page';
 
 class App extends Component {
   constructor(props) {

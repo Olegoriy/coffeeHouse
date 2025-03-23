@@ -1,45 +1,9 @@
 import { Component } from 'react';
+import coffeeData from '../../data/coffee-data.json';
 
 import './our__coffee__filter.css';
 
 class OurCoffeeFilter extends Component  {
-    constructor (props) {
-        super(props);
-        this.state = {
-            data: [
-                {
-                    name: 'AROMISTICO Coffee 1 kg',
-                    country : 'Brazil',
-                    price: '6.99$'
-                },
-                {
-                    name: 'AROMISTICO Coffee 1 kg',
-                    country : 'Kenya',
-                    price: '6.99$'
-                },
-                {
-                    name: 'AROMISTICO Coffee 1 kg',
-                    country : 'Columbia',
-                    price: '6.99$'
-                },
-                {
-                    name: 'AROMISTICO Coffee 1 kg',
-                    country : 'Brazil',
-                    price: '6.99$'
-                },
-                {
-                    name: 'AROMISTICO Coffee 1 kg',
-                    country : 'Brazil',
-                    price: '6.99$'
-                },
-                {
-                    name: 'AROMISTICO Coffee 1 kg',
-                    country : 'Brazil',
-                    price: '6.99$'
-                }
-            ]
-        }
-    }
 
     renderCatalog = (cards) => {
         return cards.map((card) => {
@@ -78,7 +42,7 @@ class OurCoffeeFilter extends Component  {
                 </div>
 
                 <div className="catalog">
-                    {this.renderCatalog(this.state.data)}
+                    {this.renderCatalog(coffeeData)}
                 </div>
 
             </div>

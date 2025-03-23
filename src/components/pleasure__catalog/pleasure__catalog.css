@@ -9,19 +9,24 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-}
-
-.modal-content {
+    overflow-y: auto; /* Разрешаем скролл только внутри оверлея */
+    padding: 20px 0; /* Добавляем отступы сверху и снизу */
+  }
+  
+  .modal-content {
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
     position: relative;
     max-width: 500px;
     width: 90%;
+    max-height: 90vh; 
+    overflow-y: auto; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.close-button {
+    margin: auto; 
+  }
+  
+  .close-button {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -29,7 +34,8 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-}
+    z-index: 1001;
+  }
 
 .modal-img {
     width: 100%;

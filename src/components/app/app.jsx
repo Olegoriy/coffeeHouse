@@ -9,7 +9,7 @@ import OurCoffeeDescription from '../our__coffee__description/our__coffee__descr
 import OurCoffeeFilter from '../our__coffee__filter/our__coffee__filter';
 import PleasureHeader from '../pleasure__header/pleasure__header';
 import PleasureDescription from '../pleasure__description/pleasure__description';
-import PleasureCatalog from '../pleasure__catalog/pleasure__catalog';
+import Catalog from '../catalog/catalog';
 
 class App extends Component {
   constructor(props) {
@@ -78,6 +78,7 @@ class App extends Component {
             <OurCoffeeHeader switchPage={this.switchPage} />
             <OurCoffeeDescription />
             <OurCoffeeFilter />
+            <Catalog />
             <Footer switchPage={this.switchPage} />
           </>
         ))}
@@ -86,7 +87,7 @@ class App extends Component {
           <>
             <PleasureHeader switchPage={this.switchPage} />
             <PleasureDescription />
-            <PleasureCatalog />
+            <Catalog />
             <Footer switchPage={this.switchPage} />
           </>
         ))}

@@ -1,26 +1,8 @@
 import { Component } from 'react';
-import coffeeData from '../../data/coffee-data.json';
 
 import './our__coffee__filter.css';
 
 class OurCoffeeFilter extends Component  {
-
-    renderCatalog = (cards) => {
-        return cards.map((card) => {
-            return (
-                <div className='card' key={card.id}>
-                    <img
-                        className='img__card'
-                        src={require('./img/card__img.svg').default}
-                        alt={card.name}
-                    />
-                    <p className="name__card">{card.name}</p>
-                    <p className="country__card">{card.country}</p>
-                    <p className="price__card">{card.price}</p>
-                </div>
-            )
-        })
-    }
 
     render () {
         return (
@@ -40,11 +22,6 @@ class OurCoffeeFilter extends Component  {
                         </div>
                     </div>
                 </div>
-
-                <div className="catalog">
-                    {this.renderCatalog(coffeeData)}
-                </div>
-
             </div>
         )
     }

@@ -13,6 +13,7 @@
     color: #fff;
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     margin: 111px auto 20px auto;
+    padding: 0 15px;
 }
 
 .white__beans {
@@ -25,6 +26,7 @@
     font-weight: 700;
     font-size: 24px;
     margin-bottom: 20px;
+    padding: 0 10px;
 }
 
 .main__container button {
@@ -50,4 +52,14 @@
     transform: scale(0.95);
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
     transition: all 0.2s ease;
+}
+
+@media (max-width: 600px) {
+    .slogan {
+        font-size: 30px;
+    }
+
+    .main__container p {
+        font-size: 18px;
+    }
 }

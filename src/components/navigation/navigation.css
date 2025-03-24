@@ -52,3 +52,9 @@ nav a:active {
     filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));
     transition: all 0.2s ease;
 }
+
+@media (max-width: 1140px) {
+    nav.container {
+        margin-left: 5vw;
+    }
+}

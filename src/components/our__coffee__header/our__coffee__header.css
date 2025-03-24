@@ -11,3 +11,9 @@
     color: #fff;
     margin-top: 60px;
 }
+
+@media (max-width: 600px) {
+    .our__coffee__head {
+        font-size: 30px;
+    }
+}

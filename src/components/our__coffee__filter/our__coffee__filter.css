@@ -70,7 +70,6 @@
     overflow: hidden;
 }
 
-/* Анимация при наведении */
 .filter:hover:not(.active) {
     background-color: #f0f0f0;
     transform: translateY(-1px);

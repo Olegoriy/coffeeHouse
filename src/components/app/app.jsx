@@ -17,7 +17,9 @@ class App extends Component {
     this.state = {
       currentPage: 'base',
       prevPage: null,
-      direction: 'right' 
+      direction: 'right',
+      filterName: '',
+      filterCountry: ''
     };
   }
 
@@ -35,12 +37,18 @@ class App extends Component {
 
     this.setState({ prevPage: this.state.currentPage, direction }, () => {
       setTimeout(() => {
-        this.setState({
+        this.setState(prevState => ({
           currentPage: page,
-          prevPage: null
-        });
+          prevPage: null,
+          filterName: page === 'ourCoffee' ? prevState.filterName : '',
+          filterCountry: page === 'ourCoffee' ? prevState.filterCountry : ''
+        }));
       }, 400);
     });
+  };
+
+  handleFilterChange = (type, value) => {
+    this.setState({ [type]: value });
   };
 
   renderPage(pageName, content) {
@@ -62,6 +70,8 @@ class App extends Component {
   }
 
   render() {
+    const { filterName, filterCountry } = this.state;
+
     return (
       <div className="app">
         {this.renderPage('base', (
@@ -77,8 +87,14 @@ class App extends Component {
           <>
             <OurCoffeeHeader switchPage={this.switchPage} />
             <OurCoffeeDescription />
-            <OurCoffeeFilter />
-            <Catalog />
+            <OurCoffeeFilter 
+              onFilterChange={this.handleFilterChange}
+              currentCountry={filterCountry}
+            />
+            <Catalog 
+              filterName={filterName}
+              filterCountry={filterCountry}
+            />
             <Footer switchPage={this.switchPage} />
           </>
         ))}
@@ -87,7 +103,10 @@ class App extends Component {
           <>
             <PleasureHeader switchPage={this.switchPage} />
             <PleasureDescription />
-            <Catalog />
+            <Catalog 
+              filterName="" 
+              filterCountry=""
+            />
             <Footer switchPage={this.switchPage} />
           </>
         ))}

@@ -7,18 +7,31 @@ class Catalog extends Component  {
       super(props);
       this.state = {
         selectedCard: null 
-      }
+      };
+    }
+  
+    getFilteredCards() {
+      const { filterName, filterCountry } = this.props;
+      
+      return coffeeData.filter(card => {
+        const nameMatch = card.name.toLowerCase().includes(filterName.toLowerCase());
+        const countryMatch = filterCountry ? 
+          card.country.toLowerCase() === filterCountry.toLowerCase() : 
+          true;
+        
+        return nameMatch && countryMatch;
+      });
     }
   
     handleCardClick = (card) => {
       this.setState({ selectedCard: card });
       document.body.style.overflowY = 'hidden';
-    }
+    };
     
     handleCloseModal = () => {
       this.setState({ selectedCard: null });
       document.body.style.overflow = '';
-    }
+    };
   
     renderCatalog = (cards) => {
       return cards.map((card) => (
@@ -36,8 +49,8 @@ class Catalog extends Component  {
           <p className="country__card">{card.country}</p>
           <p className="price__card">{card.price}</p>
         </div>
-      ))
-    }
+      ));
+    };
   
     renderModal = () => {
       const { selectedCard } = this.state;
@@ -62,18 +75,19 @@ class Catalog extends Component  {
     }
   
     render () {
-      const { selectedCard } = this.state;
-  
-      return (
-        <div className="catalog__container">
-          <div className="catalog">
-            {this.renderCatalog(coffeeData)} 
+        const { selectedCard } = this.state;
+        const filteredCards = this.getFilteredCards();
+    
+        return (
+          <div className="catalog__container">
+            <div className="catalog">
+              {this.renderCatalog(filteredCards)} 
+            </div>
+    
+            {selectedCard && this.renderModal()}
           </div>
-  
-          {selectedCard && this.renderModal()}
-        </div>
-      )
+        );
     }
-  }
-  
+}
+    
 export default Catalog;
